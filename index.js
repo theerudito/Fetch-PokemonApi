@@ -4,6 +4,8 @@ const boton = document.getElementById("buscar")
 const pokemonContainer = document.getElementById("pokemon-container")
 
 
+
+
 function clearBox(pokemonContainer) { 
   document.getElementById(pokemonContainer).innerHTML = ""; }
 
@@ -59,7 +61,7 @@ traerPokemon()
 function crearPokemon (pokemon) {
 
       const img = document.createElement("img")
-      img.src = pokemon.sprites.front_default
+      img.src = ('src', pokemon.sprites.front_default);
 
       const nombre = document.createElement("h6")
       nombre.textContent = `Nombre: ${pokemon.name}`;
@@ -86,6 +88,7 @@ function crearPokemon (pokemon) {
       div.appendChild(stars)
       div.appendChild(tamaño)
       div.appendChild(tipo)
-
+      
+      
       pokemonContainer.appendChild(div)
   }
